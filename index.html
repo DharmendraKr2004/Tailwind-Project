@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.animate-gradient-x {
+  animation: gradientMove 4s linear infinite;
+  background-size: 200% auto;
+}
+</style>
+
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-white sticky top-0 z-50 shadow">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">My Portfolio</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-teal-300">Home</a></li>
+        <li><a href="#about" class="hover:text-teal-300">About</a></li>
+        <li><a href="#projects" class="hover:text-teal-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-teal-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-300 to-white transition-all duration-1000 ease-in-out overflow-hidden border-0">
+    <!-- Artistic SVG Blobs and Animated Circles for Background -->
+    <svg class="absolute -top-32 -left-32 w-[38rem] h-[38rem] opacity-60 z-0 blur-2xl animate-pulse" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_f)">
+        <path fill="#a5b4fc" fill-opacity="0.7" d="M300,500 C400,450 550,350 500,200 C450,50 200,100 100,200 C0,300 200,550 300,500 Z"/>
+      </g>
+    </svg>
+    <svg class="absolute top-1/4 right-0 w-[28rem] h-[28rem] opacity-50 z-0 blur-3xl animate-spin-slow" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter1_f)">
+        <path fill="#f472b6" fill-opacity="0.5" d="M300,500 C400,400 600,300 500,150 C400,0 100,100 100,250 C100,400 200,600 300,500 Z"/>
+      </g>
+    </svg>
+    <svg class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[32rem] h-[32rem] opacity-40 z-0 blur-2xl animate-pulse" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter2_f)">
+        <path fill="#facc15" fill-opacity="0.4" d="M300,550 C450,500 600,400 500,250 C400,100 100,200 100,350 C100,500 200,700 300,550 Z"/>
+      </g>
+    </svg>
+    <!-- Extra Animated/Blurred Circles -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full animate-ping z-0"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-blue-200/30 rounded-full animate-pulse z-0"></div>
+    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-white/20 rounded-full blur-2xl animate-bounce z-0"></div>
+    <div class="absolute bottom-10 right-1/3 w-16 h-16 bg-blue-200/30 rounded-full blur-xl animate-pulse z-0"></div>
+
+    <!-- Glassmorphism Card -->
+    <div class="relative z-10 max-w-2xl w-full mx-auto bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border-4 border-white/20 p-10 flex flex-col items-center">
+      <!-- Profile Image with Animated Gradient Border -->
+      <div class="relative mb-6">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-yellow-400 to-purple-500 animate-gradient-x blur-lg opacity-80"></div>
+        <img src="images/file.png" alt="Profile" class="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white shadow-xl z-10 object-cover object-center" />
+      </div>
+      <!-- Welcome Text -->
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-gray-900 text-center drop-shadow-lg transition-transform duration-300 hover:scale-105">
+        Hi, I'm Dharmendra Kumar
+      </h1>
+      <div class="w-24 h-1 bg-blue-500 mx-auto mb-4 rounded-full"></div>
+      <div class="bg-white/90 border border-blue-200 rounded-xl px-6 py-3 shadow text-center mb-2">
+        <p class="text-lg text-gray-900 font-semibold">Creative Frontend Developer | Passionate about UI & UX</p>
+      </div>
+      <p class="mt-2 italic text-gray-700 text-center">"Crafting beautiful, scalable, and responsive web interfaces."</p>
+      <!-- Social Icons -->
+      <div class="flex justify-center space-x-4 mt-6">
+        <a href="#" class="text-white hover:text-pink-400 transition text-2xl"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-white hover:text-blue-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-white hover:text-yellow-400 transition text-2xl"><i class="fab fa-twitter"></i></a>
+      </div>
+      <!-- CTA Button -->
+      <a href="resume.pdf" download class="mt-8 inline-block bg-black text-white px-8 py-3 rounded-full font-bold shadow-xl hover:bg-gray-900 transition-all duration-300 animate-bounce">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-300 to-white transition-all duration-1000 ease-in-out overflow-hidden text-gray-900 px-6 py-16">
+    <!-- Artistic SVG Blobs and Circles for Background -->
+    <svg class="absolute top-0 left-0 w-[28rem] h-[28rem] opacity-40 z-0 blur-2xl animate-pulse" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g><path fill="#a5b4fc" fill-opacity="0.5" d="M300,500 C400,450 550,350 500,200 C450,50 200,100 100,200 C0,300 200,550 300,500 Z"/></g>
+    </svg>
+    <div class="absolute bottom-24 right-24 w-40 h-40 bg-blue-200/30 rounded-full animate-pulse z-0"></div>
+    <div class="absolute top-1/3 right-1/3 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl z-0"></div>
+
+    <!-- Glassmorphism Card Matching Projects Section -->
+    <div class="relative z-10 max-w-4xl w-full bg-white/30 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border-4 border-white/30">
+      <div class="w-fit mx-auto rounded-xl shadow-lg bg-black px-8 py-2 mb-4">
+        <h3 class="text-4xl font-extrabold text-center bg-gradient-to-r from-blue-700 via-blue-400 to-blue-200 bg-clip-text text-transparent animate-gradient-x">About Me</h3>
+      </div>
+      <div class="w-24 h-1 bg-blue-500 mx-auto mb-8 rounded-full"></div>
+      <div class="grid md:grid-cols-2 gap-10 text-gray-900 text-lg leading-relaxed">
+        <!-- Left Content -->
+        <div class="space-y-5 font-medium">
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow mb-2 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <p class="text-gray-900">👋 Hi! I'm <span class="font-bold text-blue-300">Dharmendra Kumar</span>, a passionate <span class="text-blue-400 font-bold">Frontend Web Developer</span> dedicated to building visually stunning and highly functional web experiences.</p>
+          </div>
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow mb-2 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <p class="text-gray-900">I specialize in crafting modern, responsive interfaces using <span class="text-blue-300 font-bold">HTML</span>, <span class="text-blue-300 font-bold">Tailwind CSS</span>, and <span class="text-blue-300 font-bold">JavaScript</span>. My focus is on clean code, accessibility, and seamless user journeys.</p>
+          </div>
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow mb-2 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <p class="text-gray-900">My mission is to deliver <span class="text-green-400 font-semibold">fast, accessible, and scalable</span> web applications that delight users and drive results.</p>
+          </div>
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow mb-2 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <p class="text-gray-900">🎯 <span class="font-bold text-green-400">Goal:</span> To become a full-stack developer and use technology to solve real-world challenges.</p>
+          </div>
+        </div>
+        <!-- Right Content -->
+        <div>
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow mb-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <h4 class="text-2xl font-bold mb-3 text-blue-700 uppercase">Skills</h4>
+            <ul class="flex flex-wrap gap-3 mb-2">
+              <li class="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold shadow uppercase">HTML5</li>
+              <li class="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold shadow uppercase">CSS3 & Tailwind CSS</li>
+              <li class="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold shadow uppercase">JavaScript</li>
+              <li class="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold shadow uppercase">Responsive Design</li>
+              <li class="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold shadow uppercase">UI/UX Using figma Design</li>
+            </ul>
+          </div>
+          <div class="bg-white/90 border border-black rounded-xl px-6 py-4 shadow transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500">
+            <h4 class="text-2xl font-bold mb-2 text-blue-700 uppercase">Education</h4>
+            <div class="bg-blue-100 rounded-lg p-4 text-blue-900">
+              <p class="uppercase"><strong>BTECH</strong><br>AKTU University (2024-2028)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-300 to-white transition-all duration-1000 ease-in-out overflow-hidden text-gray-900 px-6 py-16 border-0">
+    <!-- Floating Background Elements -->
+    <div class="absolute top-12 left-16 w-32 h-32 bg-white/20 rounded-full animate-ping"></div>
+    <div class="absolute bottom-24 right-24 w-40 h-40 bg-blue-200/30 rounded-full animate-pulse"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-200/30 via-white/10 to-blue-400/20 blur-3xl rounded-full"></div>
+
+    <!-- Glassmorphism Project Container -->
+    <div class="relative z-10 max-w-6xl w-full bg-white/30 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border-4 border-white/30">
+      <h3 class="text-4xl font-extrabold mb-4 text-center bg-gradient-to-r from-blue-700 via-blue-400 to-blue-200 bg-clip-text text-transparent animate-gradient-x">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="bg-white/80 rounded-2xl shadow-xl border-2 border-blue-300/60 hover:border-blue-500/80 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-6 flex flex-col items-center group">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpdewQCy9Hggmu9OgAaxXgRuOzzAAqrSYfoA&s" alt="To-Do App Template" class="rounded-xl mb-4 border-2 border-white/40 group-hover:scale-105 transition-transform duration-300 object-cover w-full h-40" />
+          <h4 class="font-extrabold text-xl mb-2 text-blue-600 group-hover:text-blue-400 transition">Smart To-Do App</h4>
+          <p class="text-base text-gray-800 mb-4 text-center font-medium">A modern, intuitive to-do application built with vanilla JavaScript and Tailwind CSS. Features real-time updates and a beautiful UI.</p>
+          <a href="#" class="text-blue-500 font-semibold underline hover:text-blue-700 transition">View on GitHub</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="bg-white/80 rounded-2xl shadow-xl border-2 border-blue-300/60 hover:border-blue-500/80 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-6 flex flex-col items-center group">
+          <img src="data:image/jpeg;base64,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" alt="Portfolio Template" class="rounded-xl mb-4 border-2 border-white/40 group-hover:scale-105 transition-transform duration-300 object-cover w-full h-40" />
+          <h4 class="font-extrabold text-xl mb-2 text-blue-600 group-hover:text-blue-400 transition">Portfolio Template</h4>
+          <p class="text-base text-gray-800 mb-4 text-center font-medium">A responsive and elegant portfolio template designed with Tailwind CSS, perfect for showcasing your work and skills online.</p>
+          <a href="#" class="text-blue-500 font-semibold underline hover:text-blue-700 transition">View on GitHub</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="bg-white/80 rounded-2xl shadow-xl border-2 border-blue-300/60 hover:border-blue-500/80 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-6 flex flex-col items-center group">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxL9LQnFUH-Wb6MdNYIdl5Qmm36MR3muNKrg&s" alt="Weather Dashboard" class="rounded-xl mb-4 border-2 border-white/40 group-hover:scale-105 transition-transform duration-300 object-cover w-full h-40" />
+          <h4 class="font-extrabold text-xl mb-2 text-blue-600 group-hover:text-blue-400 transition">Weather Dashboard</h4>
+          <p class="text-base text-gray-800 mb-4 text-center font-medium">A real-time weather app that fetches live data from APIs, featuring a sleek interface and responsive design.</p>
+          <a href="#" class="text-blue-500 font-semibold underline hover:text-blue-700 transition">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-300 to-white transition-all duration-1000 ease-in-out overflow-hidden text-gray-900 px-6 py-16 border-0">
+    <!-- Artistic SVG Blobs and Circles for Background -->
+    <svg class="absolute top-0 right-0 w-[24rem] h-[24rem] opacity-40 z-0 blur-2xl animate-pulse" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g><path fill="#f472b6" fill-opacity="0.4" d="M300,500 C400,400 600,300 500,150 C400,0 100,100 100,250 C100,400 200,600 300,500 Z"/></g>
+    </svg>
+    <div class="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full animate-ping z-0"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full animate-pulse z-0"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl z-0"></div>
+
+    <!-- Glassmorphism Card Matching Projects Section -->
+    <div class="relative z-10 max-w-xl w-full bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border-4 border-white/30">
+      <h3 class="text-4xl font-extrabold mb-4 text-center bg-gradient-to-r from-blue-700 via-blue-400 to-blue-200 bg-clip-text text-transparent animate-gradient-x">Contact Me</h3>
+      <div class="w-24 h-1 bg-blue-500 mx-auto mb-8 rounded-full"></div>
+      <div class="bg-white border border-black rounded-xl px-6 py-4 shadow mb-8">
+        <p class="text-center text-black font-semibold">Interested in working together or have a question? Fill out the form below and I'll get back to you soon!</p>
+      </div>
+      <form class="space-y-5">
+        <input type="text" placeholder="Your Name" class="w-full bg-white/20 text-black placeholder-gray-500 p-3 rounded border border-black focus:outline-none focus:ring-2 focus:ring-pink-400 transition" />
+        <input type="email" placeholder="Your Email" class="w-full bg-white/20 text-black placeholder-gray-500 p-3 rounded border border-black focus:outline-none focus:ring-2 focus:ring-pink-400 transition" />
+        <textarea placeholder="Your Message" class="w-full bg-white/20 text-black placeholder-gray-500 p-3 rounded border border-black h-32 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"></textarea>
+        <button type="submit" class="w-full bg-black text-white px-6 py-3 rounded-full font-bold shadow-xl hover:bg-gray-900 transition-all duration-300">Send Message</button>
+      </form>
+      <!-- Social Icons -->
+      <div class="flex justify-center space-x-4 mt-8">
+        <a href="#" class="text-black hover:text-pink-400 transition text-2xl"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-black hover:text-blue-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+   <footer class="bg-gray-800 text-white p-8">
+      <div class="text-center">
+        <h3 class="text-lg font-semibold">Connect with Me</h3>
+        <div class="mt-4 space-x-4">
+          <a href="#" class="text-blue-400 hover:underline">LinkedIn</a>
+          <a href="#" class="text-blue-400 hover:underline">GitHub</a>
+          <a href="#" class="text-blue-400 hover:underline">Twitter</a>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">Dharmendra Kumar. All rights reserved.</p>
+      </div>
+    </footer>     
+
+</body>
+</html>
